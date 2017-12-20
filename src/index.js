@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { StyleSheet } from 'aphrodite/no-important';
+import './reset.styles.js';
 import App from './containers/App';
 import registerServiceWorker from './registerServiceWorker';
 

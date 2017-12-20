@@ -4,11 +4,14 @@ import './App.css';
 import Home from '../components/home';
 import About from '../components/about';
 import Blog from '../components/blog';
+import styles from './App.styles.js';
+
+import { css } from 'aphrodite/no-important';
 
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className={css(styles.red)}>
         <nav className="navbar navbar-light">
           <ul className="nav navbar-nav">
             <li><Link to="/">Homes</Link></li>
