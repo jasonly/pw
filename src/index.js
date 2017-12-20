@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { StyleSheet } from 'aphrodite/no-important';
-import './reset.styles.js';
 import App from './containers/App';
 import registerServiceWorker from './registerServiceWorker';
+
+import './styles/reset.styles.js';
+import './styles/base.styles.js'; // shoot this works but should I do this?
 
 import { BrowserRouter } from 'react-router-dom';
 
