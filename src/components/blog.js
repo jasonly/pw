@@ -4,6 +4,8 @@ import style from './blog.styles.js';
 
 import { css } from 'aphrodite/no-important';
 
+// take some json, iterate over posts and generate a section based on the data
+
 const Blog = () => (
   <div>
     <section className={css(grid.row)}>
