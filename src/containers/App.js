@@ -11,7 +11,7 @@ import { css } from 'aphrodite/no-important';
 class App extends Component {
   render() {
     return (
-      <div className={css(styles.red)}>
+      <div>
         <nav className="navbar navbar-light">
           <ul className="nav navbar-nav">
             <li><Link to="/">Homes</Link></li>

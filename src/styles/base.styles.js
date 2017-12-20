@@ -6,14 +6,15 @@ const bodyStyles = {
   width: '980px',
 };
 
+const section = {
+  marginTop: '20px',
+  marginBottom: '20px',
+}
+
 const base = {
   globals: {
-    '*body': {
-      ...bodyStyles,
-    },
-    '*button': {
-      // base button styles
-    },
+    '*body': { ...bodyStyles },
+    '*section': { ...section },
   },
 };
 
