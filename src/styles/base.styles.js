@@ -11,15 +11,27 @@ const section = {
   marginBottom: '20px',
 }
 
+// links with dropbox
+// const links = {
+//   textDecoration: 'none',
+//   backgroundSize: '0% 0%',
+//   transition: 'background-size 500ms',
+//   ':hover': {
+//     backgroundImage: 'linear-gradient(120deg, #84fab0 0%, #84fab0 100%)',
+//     backgroundRepeat: 'no-repeat',
+//     backgroundSize: '100% 40%',
+//     backgroundPosition: '0 88%',
+//   }
+// }
+
+// links with drop textShadow
 const links = {
   textDecoration: 'none',
-  backgroundSize: '0% 0%',
-  transition: 'background-size 500ms',
+  transition: 'text-shadow 500ms',
+
   ':hover': {
-    backgroundImage: 'linear-gradient(120deg, #84fab0 0%, #84fab0 100%)',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: '100% 40%',
-    backgroundPosition: '0 88%',
+    transition: 'text-shadow 500ms',
+    textShadow: '5px 5px #84fab0',
   }
 }
 

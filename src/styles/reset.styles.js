@@ -63,9 +63,11 @@ const resets = {
     '*dt': resetContainer,
     '*dd': resetContainer,
     '*ol': {
+      ...resetContainer,
       listStyle: 'none',
     },
     '*ul': {
+      ...resetContainer,
       listStyle: 'none',
     },
     '*li': resetContainer,
