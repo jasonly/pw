@@ -4,20 +4,57 @@ import style from './blog.styles.js';
 
 import { css } from 'aphrodite/no-important';
 
-// take some json, iterate over posts and generate a section based on the data
+class Blog extends React.Component {
+  constructor(props) {
+    super(props);
 
-const Blog = () => (
-  <div>
-    <section className={css(grid.row)}>
-      <div className={css(grid.col, style.post)}>Bacon <a href="#">ipsum dolor</a> amet rump pork belly short loin, flank brisket pork shank ham spare ribs burgdoggen t-bone. Landjaeger strip steak pork chop spare ribs tenderloin tongue ribeye fatback picanha capicola biltong buffalo bresaola. Leberkas ham hock prosciutto, salami kevin meatball pork loin filet mignon pork chop. Porchetta pig salami hamburger meatball ham hock. Pastrami meatball beef andouille.</div>
-      <div className={css(grid.col, style.post)}>Strip steak flank boudin bacon hamburger turkey porchetta landjaeger. Beef jowl short ribs filet mignon, burgdoggen biltong hamburger cupim andouille. Jowl boudin salami ground round, pork chop tri-tip andouille burgdoggen tenderloin bacon prosciutto spare ribs pancetta shank. Buffalo pork belly bresaola tail bacon pancetta spare ribs hamburger pastrami turducken cupim. Sausage pig flank chuck t-bone.</div>
-    </section>
-    <section className={css(grid.row)}>
-      <div className={css(grid.col, style.post)}>
-        Strip steak flank boudin bacon hamburger turkey porchetta landjaeger. Beef jowl short ribs filet mignon, burgdoggen biltong hamburger cupim andouille. Jowl boudin salami ground round, pork chop tri-tip andouille burgdoggen tenderloin bacon prosciutto spare ribs pancetta shank. Buffalo pork belly bresaola tail bacon pancetta spare ribs hamburger pastrami turducken cupim. Sausage pig flank chuck t-bone.
+    this.state = {
+      posts: [],
+    };
+  }
+
+  componentDidMount() {
+    this.getData();
+  }
+
+  getData() {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then(response => {
+        if (response.ok) {
+          return Promise.resolve(response);
+        }
+        else {
+          return Promise.reject(new Error('Failed to load'));
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          posts: data,
+        });
+      })
+      .catch(function(error) {
+        console.log(`Error: ${error.message}`);
+      });
+  }
+
+  render() {
+    const posts = this.state.posts.map((item, i) => (
+      <div>
+        <div className={css(grid.col, style.post)}>
+          <p>{ item.body }</p>
+        </div>
       </div>
-    </section>
-  </div>
-)
+    ));
+
+    return (
+      <div>
+        <section className={css(grid.row)}>
+          <div>{ posts }</div>
+        </section>
+      </div>
+    );
+  }
+}
 
 export default Blog;
