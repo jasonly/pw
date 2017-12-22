@@ -11,11 +11,10 @@ class App extends Component {
   render() {
     return (
       <div>
-
-        <nav>
-          <ul>
-            <li><Link to="/about">about</Link></li>
-            <li><Link to="/blog">blog</Link></li>
+        <nav className={css(styles.navContainer)}>
+          <ul className={css(styles.navList)}>
+            <li className={css(styles.navItem)}><Link to="/about">about</Link></li>
+            <li className={css(styles.navItem)}><Link to="/blog">blog</Link></li>
           </ul>
          </nav>
 

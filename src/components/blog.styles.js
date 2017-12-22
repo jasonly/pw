@@ -5,8 +5,9 @@ const Style = StyleSheet.create({
     border: '1px solid gray',
     backgroundColor: 'white',
     margin: '20px',
-    boxShadow: '0',
+    boxShadow: '0px 0px white',
     padding: '20px',
+    transition: 'all 500ms ease-in-out',
 
     ':hover': {
       border: '1px solid #60daaa',

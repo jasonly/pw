@@ -11,10 +11,23 @@ const section = {
   marginBottom: '20px',
 }
 
+const links = {
+  textDecoration: 'none',
+  backgroundSize: '0% 0%',
+  transition: 'background-size 500ms',
+  ':hover': {
+    backgroundImage: 'linear-gradient(120deg, #84fab0 0%, #84fab0 100%)',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: '100% 40%',
+    backgroundPosition: '0 88%',
+  }
+}
+
 const base = {
   globals: {
     '*body': { ...bodyStyles },
     '*section': { ...section },
+    '*a': { ...links },
   },
 };
 

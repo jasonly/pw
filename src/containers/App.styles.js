@@ -1,25 +1,20 @@
 import { StyleSheet } from 'aphrodite/no-important';
 
 const Styles = StyleSheet.create({
-    red: {
-        backgroundColor: 'red'
-    },
-
-    blue: {
-        backgroundColor: 'blue'
-    },
-
-    hover: {
-        ':hover': {
-            backgroundColor: 'red'
-        }
-    },
-
-    small: {
-        '@media (max-width: 600px)': {
-            backgroundColor: 'red',
-        }
-    }
+  navContainer: {
+    height: '44px',
+    padding: '0 20px',
+  },
+  navList: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    alignContent: 'center',
+    height: '44px',
+  },
+  navItem: {
+    padding: '0 14px',
+  }
 });
 
 export default Styles;
