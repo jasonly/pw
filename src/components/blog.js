@@ -19,22 +19,23 @@ class Blog extends React.Component {
 
   getData() {
     fetch('https://jsonplaceholder.typicode.com/posts')
-      .then(response => {
+      .then((response) => {
         if (response.ok) {
           return Promise.resolve(response);
-        }
-        else {
-          return Promise.reject(new Error('Failed to load'));
+        } else {
+          return Promise.reject(new Error('eh didnt work'));
         }
       })
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
         this.setState({
           posts: data,
         });
       })
-      .catch(function(error) {
-        console.log(`Error: ${error.message}`);
+      .catch((error) => {
+        console.error(`Error: ${error.message}`);
       });
   }
 
