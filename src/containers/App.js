@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
 
 import About from '../components/about';
-import Blog from '../components/blog';
+import Blog from '../components/blogContainer';
 import styles from './App.styles.js';
 
 import { css } from 'aphrodite/no-important';

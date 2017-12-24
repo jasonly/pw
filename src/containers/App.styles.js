@@ -4,6 +4,10 @@ const Styles = StyleSheet.create({
   navContainer: {
     height: '44px',
     padding: '0 20px',
+    borderBottom: '1px solid black',
+    position: 'sticky',
+    top: '0',
+    backgroundColor: 'white',
   },
   navList: {
     display: 'flex',
