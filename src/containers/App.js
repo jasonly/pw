@@ -16,10 +16,14 @@ class App extends Component {
             <li className={css(styles.navItem)}><Link to="/about">about</Link></li>
             <li className={css(styles.navItem)}><Link to="/blog">blog</Link></li>
           </ul>
-         </nav>
+        </nav>
 
-         <Route path="/about" component={About}/>
-         <Route path="/blog" component={Blog}/>
+        <Switch>
+          <Route exact path="/" component={About}/>
+          <Route path="/about" component={About}/>
+          <Route path="/blog" component={Blog}/>
+        </Switch>
+
       </div>
     )
   }
