@@ -15,7 +15,7 @@ class BlogContainer extends Component {
   }
 
   getData() {
-    fetch('test.json')
+    fetch('https://jsonplaceholder.typicode.com/posts')
       .then((response) => {
         if (response.ok) {
           return Promise.resolve(response);
