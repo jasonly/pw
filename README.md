@@ -10,3 +10,4 @@ TODO:
 - Set up a db and mock some data
 - remove JSON placeholder
 - make something interesting
+- pwa?
